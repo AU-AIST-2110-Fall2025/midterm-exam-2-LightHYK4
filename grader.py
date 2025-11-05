@@ -14,10 +14,16 @@ def extract_data(raw_data):
     s_names = []
     s_grades = []
 
-    # ADD YOUR CODE HERE
+    for record in raw_data:
+        part = record.split(":")
+        name = part[1].title()
+        grade = int(part[2])
+
+    s_names.append(name)
+    s_grades.append(grade)
 
     return s_names, s_grades
-
+ 
 def curve_grades(grades, by_amount):
     """
     Add ``by_amount`` to every grade, clamping any value above 100 down to 100.
@@ -25,7 +31,16 @@ def curve_grades(grades, by_amount):
     Use a ``while`` loop for iteration to earn full credit (a ``for`` loop works but loses style credit).
     Return the list containing the curved grades (same list if modified, otherwise new).
     """
-    # ADD YOUR CODE HERE
+    while():
+        i = 0
+        i < len(grades)
+        grades[i] += by_amount
+
+        if grades[i] > 100 :
+            grades[i] = 100
+            i += 1
+        return
+
 
 
 def print_top_performers(names, grades):
@@ -38,7 +53,9 @@ def print_top_performers(names, grades):
     Output one line per qualifying record, no extra spaces or blank lines.
     Returns: None
     """
-    # ADD YOUR CODE HERE
+    for i in range(len(names)):
+        if grades[i] >= 95: #I do not know what went wrong here, so I winged it. Without this line I print the first name and then none. I beleive I know where it went wrong with my return but can not figure it out.
+            print(f"{names}: {grades}")
 
 
 def main():
